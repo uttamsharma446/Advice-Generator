@@ -1,8 +1,8 @@
 import React from "react";
 import styled from "styled-components";
-import { resType } from "../../App";
 import { DiceIcon } from "../../Assests/DiceIcon";
-import { DividerIcon } from "../../Assests/DividerIcon";
+import { Divider } from "../../Assests/Divider";
+import { resType } from "../Content";
 const Container = styled.div`
   background-color: hsl(217, 19%, 24%);
   text-align: center;
@@ -12,6 +12,8 @@ const Container = styled.div`
   display: flex;
   flex-direction: column;
   position: relative;
+  box-shadow: 10px 10px 150px 20px #000000;
+
   align-items: center;
   padding: 20px 20px 60px;
 `;
@@ -43,13 +45,14 @@ const Icon = styled.div`
   cursor: pointer;
 `;
 const Loader = styled.div`
-  width: 490px;
+  width: 100%;
   height: 170px;
   display: flex;
   justify-content: center;
   align-items: center;
   background-color: hsl(217, 19%, 24%);
 `;
+
 interface Props {
   onClick?: () => void;
   data?: resType | null;
@@ -62,7 +65,8 @@ export const Card: React.FC<Props> = ({ onClick, data, isLoader }) => {
         <>
           {data && <Title>{`advice#${data.id}`}</Title>}
           {data && <Advice>{`"${data.advice}"`}</Advice>}
-          <DividerIcon />
+          <Divider />
+
           <Icon
             onClick={() => {
               onClick && onClick();
