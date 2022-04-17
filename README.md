@@ -38,7 +38,6 @@ Users should be able to see advice where they can change the content while click
 ### Built with
 
 
-- Flexbox
 - [React](https://reactjs.org/) - JS library
 - [Styled Components](https://styled-components.com/) - For styles
 
