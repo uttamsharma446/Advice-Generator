@@ -25,7 +25,7 @@ Users should be able to see advice where they can change the content while click
 
 ### Screenshot
 
-![](./screenshot.png)
+![](public/screenshot.PNG)
 
 
 ### Links
